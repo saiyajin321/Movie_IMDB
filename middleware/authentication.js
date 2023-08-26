@@ -19,3 +19,5 @@ const authentication = async (req, res, next)=>{
         next(err)
     }
 }
+
+module.exports = authentication

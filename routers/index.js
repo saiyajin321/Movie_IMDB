@@ -4,6 +4,6 @@ const userRouter = require('./user')
 const movieRouter = require('./movie')
 
 router.use('/user', userRouter)
-router.use('/movie', movieRouter)
+router.use('/movies', movieRouter)
 
 module.exports = router
