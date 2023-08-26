@@ -1,4 +1,6 @@
 const axios = require('axios')
+const BEARER_TOKEN = process.env.BEARER_TOKEN
+console.log(BEARER_TOKEN);
 
 class MovieController{
     static async fetchMovies(req, res, next){
@@ -8,7 +10,7 @@ class MovieController{
                 method : 'GET',
                 headers:{
                     accept : 'application/json',
-                    Authorization : 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMjNhZDcyMGYyZGRkOWQ4NzQ4YzgzYTBmYjY0NmU1YSIsInN1YiI6IjY0ZThiZDNlYzNjODkxMDEzYWIxZjkyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.k1ZHpAm6fj9rd42AiKm8rq0EdOwsTJtcSgtHFT6LvTE'
+                    Authorization : `Bearer ${BEARER_TOKEN}`
                 }
             })
             res.status(200).json(data.results)
@@ -25,7 +27,8 @@ class MovieController{
                 method : 'GET',
                 headers : {
                     accept: 'application/json',
-                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMjNhZDcyMGYyZGRkOWQ4NzQ4YzgzYTBmYjY0NmU1YSIsInN1YiI6IjY0ZThiZDNlYzNjODkxMDEzYWIxZjkyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.k1ZHpAm6fj9rd42AiKm8rq0EdOwsTJtcSgtHFT6LvTE'                
+                    Authorization : `Bearer ${BEARER_TOKEN}`
+                    
                 }
             })
             if(!data){
