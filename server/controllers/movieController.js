@@ -1,6 +1,5 @@
 const axios = require('axios')
 const BEARER_TOKEN = process.env.BEARER_TOKEN
-console.log(BEARER_TOKEN);
 
 class MovieController{
     static async fetchMovies(req, res, next){

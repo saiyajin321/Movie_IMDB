@@ -43,7 +43,6 @@ class UserController {
                 throw {name : 'emptyBody'}
             }
             const user = await User.findOne({where : { username }})
-
             if(!user){
                 throw { name : 'noUser'}
             }
